@@ -1,23 +1,30 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+  <div class="app">
+    <SideBar/>
+    <ContentEditor/>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
 
-export default {
-  name: 'App',
-}
+import SideBar from "@/components/SideBar/SideBar.vue";
+import ContentEditor from "@/components/ContentEditor/ContentEditor.vue";
+
+@Options({
+  components: {
+    SideBar,
+    ContentEditor
+  },
+})
+export default class App extends Vue {}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style scoped>
+.app {
+  width: 100%;
+  display: flex;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

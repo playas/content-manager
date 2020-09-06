@@ -1,29 +1,22 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="app-container">
+    <SideBarMenu />
+    <ContentEditor />
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+<script>
+import { Component, Vue } from 'vue-property-decorator'
+import ContentEditor from './components/ContentEditor/ContentEditor'
+import SideBarMenu from './components/SideBarMenu/SideBarMenu'
 
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
+@Component({ name: 'app', components: { ContentEditor, SideBarMenu } })
 export default class App extends Vue {}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped lang="scss">
+.app-container {
+  display: flex;
+  flex: 1;
 }
 </style>

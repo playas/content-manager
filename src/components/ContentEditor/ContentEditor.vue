@@ -1,5 +1,5 @@
 <template>
-  <h1>content</h1>
+  <div class="content-editor"></div>
 </template>
 
 <script lang="ts">
@@ -8,4 +8,9 @@ import { Component, Vue } from 'vue-property-decorator'
 export default class ContentEditor extends Vue {}
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.content-editor {
+  flex: 1;
+  background-color: #e5e5e5;
+}
+</style>

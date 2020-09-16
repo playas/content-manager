@@ -10,6 +10,8 @@ export default class ContentEditor extends Vue {}
 
 <style scoped lang="scss">
 .sidebar-menu {
+  display: flex;
+  justify-content: center;
   width: 300px;
   background-color: #435365;
 }

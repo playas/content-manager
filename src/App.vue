@@ -1,16 +1,16 @@
 <template>
   <div class="app-container">
     <SideBarMenu />
-    <ContentEditor />
+    <EditorContent />
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import ContentEditor from './components/ContentEditor/ContentEditor'
-import SideBarMenu from './components/SideBarMenu/SideBarMenu'
+import EditorContent from './modules/Editor/components/EditorContent/EditorContent.vue'
+import SideBarMenu from './components/SideBarMenu/SideBarMenu.vue'
 
-@Component({ name: 'app', components: { ContentEditor, SideBarMenu } })
+@Component({ name: 'app', components: { EditorContent, SideBarMenu } })
 export default class App extends Vue {}
 </script>
 
